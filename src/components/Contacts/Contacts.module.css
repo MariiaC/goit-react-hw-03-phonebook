@@ -1,0 +1,22 @@
+.contactItem {
+  width: 400px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.contactItem div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #99c4c8;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: red;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
