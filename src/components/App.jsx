@@ -51,6 +51,21 @@ export class App extends Component {
     }));
   };
 
+  //ДЗ 3
+
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const jsonContacts = JSON.parse(contacts);
+    if (jsonContacts) {
+      this.setState({ contacts: jsonContacts });
+    }
+  }
+  componentDidUpdate(prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
   //рендерим
 
   render() {
