@@ -17,12 +17,6 @@ export class App extends Component {
   addContact = ({ name, number }) => {
     const { contacts } = this.state;
 
-    const contact = {
-      id: nanoid(),
-      name,
-      number,
-    };
-
 
     if (
       contacts.find(
@@ -32,9 +26,19 @@ export class App extends Component {
       alert(`${name} already exists`);
       return;
     }
+
+    const contact = {
+      id: nanoid(),
+      name,
+      number,
+    };
+    
     this.setState(preState => ({
       contacts: [contact, ...preState.contacts],
     }));
+
+
+
   };
 
   // пошук конт
